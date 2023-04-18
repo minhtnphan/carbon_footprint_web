@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://electricScore",
+            "request": "launch",
+            "url": "http://electricScore"
+        }
+    ]
+}
