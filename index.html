@@ -41,35 +41,34 @@
 			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 				<div id="form">
 					<form>
+						<br/>
 						<div class="form-group">
-							<label for="plastic">Number of plastic cups used per week from convenience stores</label>
+							<label style="font-size:larger" for="plastic">Enter your estimated number of plastic cups used per week:</label>
 							<div class="input-group">
-								<div class="input-group-addon">₹</div>
+								<div class="input-group-addon">No. of cups</div>
 								<input class="form-control" id="plastic" type="number" min="0" step="0.01">
 							</div>
 							<span class="help-block">Enter 0 if not applicable. If left blank, will default to 0.</span>
 						</div>
+						<br/>
 					<button id="calculate-btn" type="button" class="btn btn-success btn-lg btn-block">Calculate</button>
 					</form>
 				</div>
 
-				<div id="results" class="text-center">
-					<p class="lead">With <span id="plastic"></span> plastic cups per week, you have just:</p>
-
-					<h1>Consumed <span style="font-size: larger;" id="energy"></span> MJ of total energy input, 99% of which is from non-renewable sources, such as oil or natural gas.</h1>
-					<h1>Used <span style="font-size: larger;" id="water"></span> kg of water</h1>
-					<h1>Emitted <span style="font-size: larger;" id="co2"></span> kg CO2 eq as Global Warming Potential</h1>
+				<div id="results">
+					<p class="text-center" style = "font-size: large; font-weight: bold" class="lead">With <span id="plastic"></span> plastic cups per week, you have just:</p>
 					<br/>
+					<ul>
+						<li style="font-size: larger;">Consumed <span style="font-size: x-large;" id="energy"></span> MJ of total energy input, 99% of which is from non-renewable sources, such as oil or natural gas.</li>
+						<li style="font-size: larger;">Used <span style="font-size: x-large;" id="water"></span> kg of water</li>
+						<li style="font-size: larger;">Emitted <span style="font-size: x-large;" id="co2"></span> kg CO2 eq as Global Warming Potential</li>
+					</ul>
 					<br/>
-					<!-- <h5 class="bg-success score-info">438,000 or below is EXCELLENT</h5>
-					<h5 class="bg-info score-info">438,000 to 1,167,927 is GOOD</h5>
-					<h5 class="bg-warning score-info">1,167,927 to 1,606,000 is AVERAGE</h5>
-					<h5 class="bg-danger score-info">1,606,000 or above is BAD</h5> -->
-					<br/>
-					<br/>
+					<img src="images/plastic-cup.jpeg">
 					<br/>
 					<button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block">Recalculate</button>
-
+				</div>
+	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
