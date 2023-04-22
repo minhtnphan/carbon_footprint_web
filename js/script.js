@@ -30,16 +30,22 @@ $(document).ready(function() {
 			if (plasticInput === 0 || plasticInput === "undefined") {
 				plasticInput = 0;
 			} else {
-				plasticScore = plasticInput * 105;
+				energy = plasticInput * 1.4; //MJ
+				water = plasticInput * 1.053 //kg
+				co2 = plasticInput *0.03 //kg
+
 			}
-			console.log("Electric score is: " + plasticScore);
+			console.log(energy, water, co2);
 
 			// calculate total score and round to nearest whole integer
 			totalScore = Math.round(plasticScore);
 			var formattedScore = totalScore.toLocaleString("en");
 			// console.log(totalScore);
 
-			document.getElementById("score").innerHTML = formattedScore;
+			//document.getElementById("score").innerHTML = formattedScore;
+			document.getElementById("energy").innerHTML = (Math.round(energy * 100) / 100).toLocaleString("en");
+			document.getElementById("water").innerHTML = (Math.round(water * 100) / 100).toLocaleString("en");
+			document.getElementById("co2").innerHTML = (Math.round(co2 * 100) / 100).toLocaleString("en");
 
 			// display results
 			$("#results").show();
